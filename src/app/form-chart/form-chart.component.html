@@ -1,0 +1,23 @@
+<h3 class="mid">Pie chart with user input</h3>
+<hr />
+
+<div class="mid">
+    <form [formGroup]="pieChartForm" (ngSubmit)='createChart()'>
+        <div class="form-group">
+            <label for="boxOne">Box 1</label>
+            <input type="number" class="form-control" name="boxone" formControlName="one" #one>
+        </div>
+        <div class="form-group">
+            <label for="boxTwo">Box 2</label>
+            <input type="number" class="form-control" name="boxtwo" formControlName="two" #two>
+            <hr>
+            <button class="mid">Submit</button>
+        </div>
+
+        <div class="mid" style="height: 50vh;">
+
+            <canvas id="myChart"></canvas>
+
+        </div>
+    </form>
+</div>
